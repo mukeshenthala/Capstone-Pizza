@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revenue</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🍕 Admin Panel
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="menu-management.html">Menu</a>
+
+        <a href="orders.html">Orders</a>
+
+        <a href="revenue.html">Revenue</a>
+
+    </div>
+
+</nav>
+
+<section class="hero-small">
+
+    <h1>Revenue Analytics</h1>
+
+</section>
+
+<div class="dashboard-card">
+
+    <h2 id="totalRevenue">
+        ₹0
+    </h2>
+
+    <p>
+        Total Revenue
+    </p>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script>
+
+window.onload = async function(){
+
+    const response =
+    await fetch(
+        ORDER_API.getAllOrders
+    );
+
+    const orders =
+    await response.json();
+
+    let total = 0;
+
+    orders.forEach(order => {
+
+        total +=
+        order.totalAmount;
+    });
+
+    document
+    .getElementById(
+        "totalRevenue"
+    )
+    .innerText =
+    "₹" + total;
+};
+
+</script>
+
+</body>
+</html>

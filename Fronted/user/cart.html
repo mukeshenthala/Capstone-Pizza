@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>My Cart</title>
+
+<link rel="stylesheet"
+      href="../css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🍕 Pizza Store
+    </div>
+
+    <div class="nav-links">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a href="cart.html">
+            Cart
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="cart-container">
+
+    <h2 class="section-title">
+
+        My Cart
+
+    </h2>
+
+    <div id="cartItems">
+
+    </div>
+
+    <h2 id="totalPrice"
+        class="total">
+
+        ₹0
+
+    </h2>
+
+    <br>
+
+    <select id="deliveryMode"
+            class="form-control">
+
+        <option value="HOME DELIVERY">
+
+            Home Delivery
+
+        </option>
+
+        <option value="TAKE AWAY">
+
+            Take Away
+
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <button
+    class="btn btn-primary"
+    onclick="placeOrder()">
+
+        Place Order
+
+    </button>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Menu Management</title>
+
+<link rel="stylesheet"
+      href="../css/style.css">
+
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🍕 Admin Panel
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="menu-management.html">
+            Menu
+        </a>
+
+        <a href="orders.html">
+            Orders
+        </a>
+
+        <a href="revenue.html">
+            Revenue
+        </a>
+
+    </div>
+
+</nav>
+
+<section class="hero-small">
+
+    <h1>
+        Manage Menu
+    </h1>
+
+</section>
+
+<div class="form-container">
+
+    <h2>Add New Item</h2>
+
+    <form id="menuForm">
+
+        <input type="hidden"
+               id="menuId">
+
+        <input type="text"
+               id="itemName"
+               placeholder="Item Name"
+               required>
+
+        <textarea id="description"
+                  placeholder="Description"
+                  required></textarea>
+
+        <input type="number"
+               id="price"
+               placeholder="Price"
+               required>
+
+        <input type="text"
+               id="imageUrl"
+               placeholder="Image URL">
+
+        <select id="category">
+
+            <option value="VEG">
+                VEG
+            </option>
+
+            <option value="NONVEG">
+                NONVEG
+            </option>
+
+            <option value="DESSERT">
+                DESSERT
+            </option>
+
+            <option value="BEVERAGE">
+                BEVERAGE
+            </option>
+
+        </select>
+
+        <button type="submit"
+                class="btn btn-primary">
+
+            Save Item
+
+        </button>
+
+    </form>
+
+</div>
+
+<div id="menuContainer"
+     class="menu-grid">
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/admin-menu.js"></script>
+
+</body>
+</html>

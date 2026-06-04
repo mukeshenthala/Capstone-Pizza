@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>My Orders</title>
+
+<link rel="stylesheet"
+      href="../css/style.css">
+
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🍕 Pizza Store
+    </div>
+
+    <div class="nav-links">
+
+        <a href="../index.html">Home</a>
+
+        <a href="menu.html">Menu</a>
+
+        <a href="cart.html">Cart</a>
+
+        <a href="orders.html">Orders</a>
+        <button
+onclick="window.location.href='bill.html'"
+class="btn btn-primary">
+
+View Bill
+
+</button>
+
+    </div>
+
+</nav>
+
+<section class="hero-small">
+
+    <h1>
+        My Orders
+    </h1>
+
+</section>
+
+<div id="ordersContainer"
+     class="orders-container">
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/order.js"></script>
+
+</body>
+</html>

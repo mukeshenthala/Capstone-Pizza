@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Pizza Store Menu</title>
+
+<link rel="stylesheet"
+href="../css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🍕 Pizza Store
+    </div>
+
+    <div class="nav-links">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a href="cart.html">
+            🛒 Cart
+            (<span id="cartCount">0</span>)
+        </a>
+
+        <a href="orders.html">
+            Orders
+        </a>
+
+        <div class="profile-container">
+
+            <span
+            id="username"
+            onclick="toggleProfile()">
+
+            </span>
+
+            <div
+            id="profilePopup"
+            class="profile-popup">
+
+                <h3 id="profileName"></h3>
+
+                <p id="profileEmail"></p>
+
+                <button
+                class="btn btn-danger"
+                onclick="logout()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<section class="hero-small">
+
+    <h1>
+        Our Menu
+    </h1>
+
+</section>
+
+<!-- SEARCH BOX -->
+
+<div style="text-align:center;margin-bottom:30px;">
+
+    <input
+    type="text"
+    id="searchBox"
+    placeholder="🔍 Search Pizza, Dessert, Beverage..."
+    onkeyup="searchMenu()"
+    style="
+    width:400px;
+    max-width:90%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:16px;">
+
+</div>
+
+<!-- CATEGORY CARDS -->
+
+<div class="category-section">
+
+    <div
+    class="category-card"
+    onclick="filterCategory('VEG')">
+
+        🍕
+        <h3>Veg Pizza</h3>
+
+    </div>
+
+    <div
+    class="category-card"
+    onclick="filterCategory('NONVEG')">
+
+        🍗
+        <h3>Non Veg Pizza</h3>
+
+    </div>
+
+    <div
+    class="category-card"
+    onclick="filterCategory('DESSERT')">
+
+        🍰
+        <h3>Desserts</h3>
+
+    </div>
+
+    <div
+    class="category-card"
+    onclick="filterCategory('BEVERAGE')">
+
+        🥤
+        <h3>Beverages</h3>
+
+    </div>
+
+</div>
+
+<h2
+id="categoryTitle"
+class="section-title">
+
+    Select Category
+
+</h2>
+
+<div
+id="menuContainer"
+class="menu-container">
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/menu.js"></script>
+
+</body>
+</html>
